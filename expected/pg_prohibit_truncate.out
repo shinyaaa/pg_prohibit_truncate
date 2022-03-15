@@ -1,9 +1,16 @@
 CREATE TABLE test_table (i INT);
 INSERT INTO test_table VALUES (1), (2);
+SELECT * FROM test_table;
+ i 
+---
+ 1
+ 2
+(2 rows)
+
 TRUNCATE test_table;
 ERROR:  do not use truncate
 SELECT * FROM test_table;
- i
+ i 
 ---
  1
  2
