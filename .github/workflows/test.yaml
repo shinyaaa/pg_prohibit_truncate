@@ -34,13 +34,13 @@ jobs:
         make -j 2 -s
         make -s install
         initdb -D ${PGDATA} --locale=C --encoding=UTF8
-        pg_ctl -D ${PGDATA} -w start
     - name: before_script
       run: |
         cd ${GITHUB_WORKSPACE}
         make USE_PGXS=1 PG_CONFIG=${PGHOME}/bin/pg_config
         make USE_PGXS=1 PG_CONFIG=${PGHOME}/bin/pg_config install
         sed -i -e "s/#shared_preload_libraries = ''/shared_preload_libraries = 'pg_prohibit_truncate'/" ${PGDATA}/postgresql.conf
+        pg_ctl -D ${PGDATA} -w start
     - name: script
       run: |
         make USE_PGXS=1 PG_CONFIG=${PGHOME}/bin/pg_config installcheck
