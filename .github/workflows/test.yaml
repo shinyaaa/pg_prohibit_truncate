@@ -40,6 +40,7 @@ jobs:
         cd ${GITHUB_WORKSPACE}
         make USE_PGXS=1 PG_CONFIG=${PGHOME}/bin/pg_config
         make USE_PGXS=1 PG_CONFIG=${PGHOME}/bin/pg_config install
+        sed -i -e "s/#shared_preload_libraries = ''/shared_preload_libraries = 'pg_prohibit_truncate'/" ${PGDATA}/postgresql.conf
     - name: script
       run: |
         make USE_PGXS=1 PG_CONFIG=${PGHOME}/bin/pg_config installcheck
