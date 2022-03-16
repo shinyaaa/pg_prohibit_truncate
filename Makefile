@@ -1,5 +1,4 @@
-MODULE_big = pg_prohibit_truncate
-OBJS = pg_prohibit_truncate.o
+MODULE = pg_prohibit_truncate
 
 REGRESS = pg_prohibit_truncate
 
