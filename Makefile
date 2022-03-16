@@ -1,4 +1,4 @@
-MODULE = pg_prohibit_truncate
+MODULES = pg_prohibit_truncate
 
 REGRESS = pg_prohibit_truncate
 
