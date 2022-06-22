@@ -3,6 +3,7 @@
 # pg_prohibit_truncate
 This extension prohibit from executing TRUNCATE command on PostgreSQL.
 This repository is designed to show you how to create extensions using hooks, and this is part of the presentation material at the [JPUG PostgreSQL Unconference](https://pgunconf.connpass.com/event/240528/).
+Presentation materials can be found [here](https://www.slideshare.net/nttdata-tech/postgresql-extension-hook-pgunconf33-nttdata).
 
 ## Install
 Download the source archive of pg_prohibit_truncate from [here](https://github.com/shinyaaa/pg_prohibit_truncate), and then build and install it.
